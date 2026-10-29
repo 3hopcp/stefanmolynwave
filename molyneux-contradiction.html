@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>░T░R░U░T░H░ 關於 Stefan Molyneux グリッチ ▓▒░</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232b0040'/%3E%3Ccircle cx='32' cy='26' r='18' fill='%23ff71ce'/%3E%3Crect y='44' width='64' height='20' fill='%2301cdfe'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --pink: #ff71ce;
+    --hot-pink: #ff2fb4;
+    --cyan: #01cdfe;
+    --aqua: #01f9d3;
+    --violet: #b967ff;
+    --purple: #7b2ff7;
+    --yellow: #fffb96;
+    --orange: #ff9a3c;
+    --magenta: #ff5ec4;
+    --blue: #2c6fff;
+    --deep: #2b0040;
+    --deep-2: #15002a;
+    --white: #ffffff;
+    --ink: #f6e9ff;
+    --glow-pink: 0 0 10px #ff71ce, 0 0 25px #ff71ce, 0 0 50px #ff2fb4;
+    --glow-cyan: 0 0 10px #01cdfe, 0 0 25px #01cdfe, 0 0 50px #01cdfe;
+    --glow-violet: 0 0 12px #b967ff, 0 0 28px #b967ff;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Palatino Linotype", Palatino, "Times New Roman", Georgia, serif;
+    line-height: 1.75;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(255, 113, 206, 0.35), transparent 45%),
+      radial-gradient(circle at 12% 8%, rgba(1, 205, 254, 0.3), transparent 40%),
+      radial-gradient(circle at 88% 12%, rgba(185, 103, 255, 0.35), transparent 42%),
+      radial-gradient(circle at 50% 95%, rgba(1, 249, 211, 0.22), transparent 50%),
+      linear-gradient(180deg, #1a0033 0%, #2b0040 35%, #3b0056 60%, #15002a 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+
+  /* ================= VHS SCANLINE + NOISE OVERLAY ================= */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(0, 0, 0, 0) 2px,
+        rgba(0, 0, 0, 0.14) 3px,
+        rgba(0, 0, 0, 0) 4px
+      );
+    mix-blend-mode: multiply;
+  }
+
+  /* Faint drifting chromatic band */
+  body::after {
+    content: "";
+    position: fixed;
+    left: 0; right: 0;
+    top: -30vh;
+    height: 22vh;
+    z-index: 9998;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+      transparent,
+      rgba(255, 113, 206, 0.05),
+      rgba(1, 205, 254, 0.08),
+      transparent);
+    animation: track 9s linear infinite;
+  }
+
+  @keyframes track {
+    from { transform: translateY(0); }
+    to { transform: translateY(140vh); }
+  }
+
+  /* ================= DECOR: FLOATING KATAKANA ================= */
+  .glyph-rain {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .glyph-rain span {
+    position: absolute;
+    font-family: "Courier New", monospace;
+    font-size: 1.4rem;
+    color: rgba(255, 113, 206, 0.16);
+    text-shadow: var(--glow-pink);
+    animation: floaty 14s ease-in-out infinite;
+    top: var(--t);
+    left: var(--l);
+    animation-delay: var(--d);
+  }
+
+  .glyph-rain span:nth-child(2n) { color: rgba(1, 205, 254, 0.16); text-shadow: var(--glow-cyan); }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+    50% { transform: translateY(-22px) rotate(6deg); opacity: 1; }
+  }
+
+  /* ================= MARQUEE BANNERS ================= */
+  .marquee {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(90deg, var(--hot-pink), var(--violet), var(--cyan), var(--aqua), var(--hot-pink));
+    background-size: 300% 100%;
+    animation: hueflow 8s linear infinite;
+    color: var(--deep);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 2px solid var(--cyan);
+    border-bottom: 2px solid var(--pink);
+    box-shadow: var(--glow-pink);
+  }
+
+  .marquee.rev { animation-direction: reverse; border-top-color: var(--pink); border-bottom-color: var(--cyan); box-shadow: var(--glow-cyan); }
+
+  .marquee .track {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slide 22s linear infinite;
+  }
+
+  .marquee.rev .track { animation-duration: 26s; }
+
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+  @keyframes hueflow { from { background-position: 0% 50%; } to { background-position: 300% 50%; } }
+
+  /* ================= PERSPECTIVE GRID FLOOR ================= */
+  .grid-floor {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    z-index: 1;
+    background: linear-gradient(180deg, transparent, rgba(255, 47, 180, 0.12));
+    border-bottom: 2px solid var(--cyan);
+    box-shadow: 0 0 40px rgba(1, 205, 254, 0.4) inset;
+  }
+
+  .grid-floor::before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    bottom: -60px;
+    height: 300px;
+    background-image:
+      linear-gradient(90deg, rgba(1, 205, 254, 0.55) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 113, 206, 0.5) 1px, transparent 1px);
+    background-size: 42px 42px;
+    transform: perspective(220px) rotateX(64deg);
+    animation: flow 1.6s linear infinite;
+    box-shadow: 0 0 60px rgba(185, 103, 255, 0.4);
+  }
+
+  @keyframes flow { from { background-position: 0 0; } to { background-position: 0 42px; } }
+
+  /* ================= RETRO SUN ================= */
+  .sun {
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, var(--yellow) 0%, var(--orange) 42%, var(--hot-pink) 70%, var(--violet) 100%);
+    box-shadow: 0 0 60px var(--pink), 0 0 120px var(--orange);
+    z-index: 0;
+  }
+
+  .sun::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: repeating-linear-gradient(180deg, transparent 0 9px, var(--deep) 10px 15px, transparent 16px 22px);
+  }
+
+  /* ================= WRAP / LOPSIDED ================= */
+  .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+
+  @media (min-width: 900px) {
+    .wrap { margin-left: calc(50% - 470px); margin-right: auto; padding-right: 3rem; }
+  }
+
+  /* ================= MASTHEAD / GLITCH TITLE ================= */
+  header.masthead {
+    position: relative;
+    padding: 1.6rem 1.4rem 1.8rem;
+    margin-bottom: 1.6rem;
+    border-radius: 22px;
+    background:
+      linear-gradient(135deg, rgba(255, 113, 206, 0.16), rgba(1, 205, 254, 0.16), rgba(185, 103, 255, 0.2)),
+      rgba(21, 0, 42, 0.7);
+    border: 2px solid var(--cyan);
+    box-shadow: var(--glow-cyan), inset 0 0 45px rgba(185, 103, 255, 0.25);
+    backdrop-filter: blur(4px);
+  }
+
+  .kicker {
+    display: inline-block;
+    font-family: "Courier New", monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--deep);
+    padding: 0.32rem 0.85rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--yellow), var(--orange));
+    box-shadow: 0 0 18px var(--orange);
+    animation: flicker 4s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 92%, 100% { opacity: 1; }
+    93% { opacity: 0.35; }
+    95% { opacity: 1; }
+    97% { opacity: 0.5; }
+  }
+
+  h1.glitch {
+    position: relative;
+    font-family: "Courier New", monospace;
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: var(--glow-pink);
+  }
+
+  h1.glitch::before,
+  h1.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  h1.glitch::before {
+    color: var(--cyan);
+    animation: glitch-a 3.2s infinite steps(1);
+    clip-path: inset(0 0 55% 0);
+  }
+
+  h1.glitch::after {
+    color: var(--pink);
+    animation: glitch-b 2.7s infinite steps(1);
+    clip-path: inset(55% 0 0 0);
+  }
+
+  @keyframes glitch-a {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-3px, -2px); }
+    40% { transform: translate(3px, 2px); }
+    60% { transform: translate(-2px, 1px); }
+    80% { transform: translate(2px, -1px); }
+  }
+
+  @keyframes glitch-b {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(3px, 1px); }
+    50% { transform: translate(-3px, -1px); }
+    75% { transform: translate(2px, 2px); }
+  }
+
+  .jp {
+    font-family: "Palatino Linotype", Palatino, serif;
+    letter-spacing: 0.3em;
+  }
+
+  .subtitle {
+    font-family: "Courier New", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--aqua);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(1, 249, 211, 0.7);
+  }
+
+  .subtitle em { color: var(--yellow); font-style: normal; text-shadow: 0 0 10px var(--yellow); }
+
+  /* ================= NAV ================= */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.8rem;
+    padding: 0;
+  }
+
+  nav a {
+    position: relative;
+    font-family: "Courier New", monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cyan);
+    background: rgba(21, 0, 42, 0.8);
+    border: 1px solid var(--cyan);
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(1, 205, 254, 0.35), inset 0 0 10px rgba(1, 205, 254, 0.12);
+    transition: all 0.18s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: var(--deep);
+    background: linear-gradient(90deg, var(--pink), var(--violet));
+    border-color: var(--yellow);
+    box-shadow: var(--glow-pink);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+  }
+
+  /* ================= CARDS ================= */
+  section {
+    position: relative;
+    margin: 0 0 1.4rem;
+    padding: 1.6rem 1.6rem 1.7rem;
+    border-radius: 18px;
+    background:
+      linear-gradient(135deg, rgba(255, 113, 206, 0.10), rgba(1, 205, 254, 0.08), rgba(185, 103, 255, 0.14)),
+      rgba(30, 0, 55, 0.72);
+    border: 1px solid rgba(1, 205, 254, 0.5);
+    box-shadow:
+      0 0 22px rgba(255, 113, 206, 0.25),
+      0 0 40px rgba(1, 205, 254, 0.15),
+      inset 0 0 40px rgba(185, 103, 255, 0.12);
+    backdrop-filter: blur(5px);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  section:hover { box-shadow: 0 0 30px rgba(255, 113, 206, 0.45), 0 0 60px rgba(1, 205, 254, 0.3); }
+
+  h2 {
+    font-family: "Courier New", monospace;
+    font-size: 0.74rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+    color: var(--yellow);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-shadow: 0 0 12px rgba(255, 251, 150, 0.6);
+  }
+
+  h2::before {
+    content: "◢";
+    color: var(--pink);
+    text-shadow: var(--glow-pink);
+  }
+
+  h2.cyan { color: var(--aqua); text-shadow: 0 0 12px rgba(1, 249, 211, 0.6); }
+
+  p { margin: 0 0 1.1rem; font-size: 1.03rem; }
+  p:last-child { margin-bottom: 0; }
+
+  a.link {
+    color: var(--cyan);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(1, 205, 254, 0.5);
+    text-shadow: 0 0 8px rgba(1, 205, 254, 0.5);
+    transition: all 0.16s ease;
+  }
+
+  a.link:hover {
+    color: var(--yellow);
+    border-bottom-color: var(--yellow);
+    text-shadow: 0 0 14px var(--yellow);
+    background: rgba(255, 251, 150, 0.08);
+  }
+
+  blockquote {
+    margin: 1.2rem 0;
+    padding: 0.8rem 1rem;
+    border-left: 3px solid var(--pink);
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    color: var(--white);
+    background: linear-gradient(90deg, rgba(255, 113, 206, 0.18), transparent 75%);
+    box-shadow: inset 0 0 30px rgba(255, 113, 206, 0.1);
+  }
+
+  blockquote.cyan {
+    border-left-color: var(--cyan);
+    background: linear-gradient(90deg, rgba(1, 205, 254, 0.18), transparent 75%);
+    box-shadow: inset 0 0 30px rgba(1, 205, 254, 0.1);
+  }
+
+  blockquote.violet {
+    border-left-color: var(--violet);
+    background: linear-gradient(90deg, rgba(185, 103, 255, 0.18), transparent 75%);
+    box-shadow: inset 0 0 30px rgba(185, 103, 255, 0.1);
+  }
+
+  /* ================= LOPSIDED ================= */
+  .lopsided {
+    margin-left: -1rem;
+    margin-right: 2rem;
+    border-left: 5px solid;
+    border-image: linear-gradient(180deg, var(--hot-pink), var(--cyan)) 1;
+    background:
+      linear-gradient(100deg, rgba(255, 47, 180, 0.14), rgba(1, 205, 254, 0.1), rgba(185, 103, 255, 0.12)),
+      rgba(43, 0, 64, 0.75);
+  }
+
+  @media (max-width: 620px) { .lopsided { margin-left: 0; margin-right: 0; } }
+
+  /* ================= HOLOGRAPHIC FLIP BLOCK ================= */
+  .flip {
+    position: relative;
+    padding: 1.05rem 1.2rem;
+    margin: 1.4rem 0;
+    border-radius: 14px;
+    background: linear-gradient(120deg,
+      #ff71ce 0%, #b967ff 22%, #01cdfe 44%,
+      #01f9d3 66%, #fffb96 88%, #ff71ce 100%);
+    background-size: 320% 320%;
+    animation: holo 7s ease infinite;
+    color: var(--deep);
+    box-shadow: 0 0 24px rgba(185, 103, 255, 0.5);
+  }
+
+  @keyframes holo {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .flip .flip-inner {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    font-family: "Palatino Linotype", Palatino, serif;
+    color: var(--ink);
+  }
+
+  .flip .unsaid { display: none; color: var(--hot-pink); font-style: italic; }
+  .flip:hover .said { display: none; }
+  .flip:hover .unsaid { display: block; }
+
+  /* ================= TWO-COLUMN ================= */
+  .two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    align-items: start;
+  }
+
+  .two > div {
+    padding: 1.1rem 1.15rem;
+    border-radius: 14px;
+    border: 1px solid;
+    backdrop-filter: blur(4px);
+  }
+
+  .two > div:first-child {
+    text-align: left;
+    border-color: rgba(1, 249, 211, 0.5);
+    background: linear-gradient(160deg, rgba(1, 249, 211, 0.14), rgba(1, 205, 254, 0.06));
+    box-shadow: 0 0 22px rgba(1, 249, 211, 0.22), inset 0 0 30px rgba(1, 249, 211, 0.1);
+  }
+
+  .two > div:last-child {
+    text-align: right;
+    border-color: rgba(255, 113, 206, 0.5);
+    background: linear-gradient(200deg, rgba(255, 113, 206, 0.14), rgba(255, 47, 180, 0.06));
+    box-shadow: 0 0 22px rgba(255, 113, 206, 0.22), inset 0 0 30px rgba(255, 113, 206, 0.1);
+  }
+
+  .two h2 { justify-content: flex-start; }
+  .two > div:last-child h2 { justify-content: flex-end; flex-direction: row-reverse; }
+
+  @media (max-width: 620px) {
+    .two { grid-template-columns: 1fr; }
+    .two > div:last-child { text-align: left; }
+    .two > div:last-child h2 { justify-content: flex-start; flex-direction: row; }
+  }
+
+  /* ================= CHECKERBOARD DIVIDER ================= */
+  .checker {
+    height: 22px;
+    margin: 1.6rem 0;
+    border-radius: 6px;
+    background-image:
+      linear-gradient(45deg, var(--pink) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--pink) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--cyan) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--cyan) 75%);
+    background-size: 22px 22px;
+    background-position: 0 0, 0 11px, 11px -11px, -11px 0;
+    box-shadow: 0 0 18px rgba(255, 113, 206, 0.5);
+  }
+
+  /* ================= LISTS ================= */
+  ul.side { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+
+  ul.side li {
+    position: relative;
+    padding: 0.45rem 0 0.45rem 1.7rem;
+    border-bottom: 1px solid rgba(1, 205, 254, 0.16);
+    font-size: 0.98rem;
+  }
+
+  ul.side li:last-child { border-bottom: 0; }
+  ul.side li::before { position: absolute; left: 0; top: 0.45rem; font-family: "Courier New", monospace; font-weight: bold; }
+  ul.pro li::before { content: "▶"; color: var(--aqua); text-shadow: 0 0 10px var(--aqua); }
+  ul.con li::before { content: "■"; color: var(--pink); text-shadow: 0 0 10px var(--pink); }
+
+  /* ================= VERDICT ================= */
+  .verdict {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.4rem 0;
+    font-family: "Courier New", monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .verdict span {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 0.4rem;
+    border-radius: 10px;
+    color: var(--deep);
+    animation: pulseglow 2.4s ease-in-out infinite;
+  }
+
+  .verdict .yes { background: linear-gradient(135deg, var(--aqua), var(--cyan)); box-shadow: 0 0 16px var(--cyan); }
+  .verdict .no { background: linear-gradient(135deg, var(--magenta), var(--hot-pink)); box-shadow: 0 0 16px var(--pink); animation-delay: 0.4s; }
+  .verdict .maybe { background: linear-gradient(135deg, var(--yellow), var(--orange)); box-shadow: 0 0 16px var(--orange); animation-delay: 0.8s; }
+
+  @keyframes pulseglow {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.015); filter: brightness(1.15); }
+  }
+
+  /* ================= STAMP ================= */
+  .stamp {
+    display: inline-block;
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    padding: 0.28rem 0.7rem;
+    border-radius: 6px;
+    transform: rotate(-4deg);
+    margin: 0.3rem 0 1rem;
+    background: rgba(255, 251, 150, 0.1);
+    box-shadow: 0 0 16px rgba(255, 251, 150, 0.5);
+  }
+
+  /* ================= CONFUSED INTERSTITIAL ================= */
+  .confused {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--deep);
+    margin: 0 0 1.4rem;
+    padding: 1.4rem 1.1rem;
+    border-radius: 18px;
+    border: 2px dashed var(--magenta);
+    background: linear-gradient(120deg, var(--yellow), var(--orange), var(--pink), var(--violet), var(--cyan), var(--aqua));
+    background-size: 300% 300%;
+    animation: holo 9s ease infinite;
+    box-shadow: 0 0 30px rgba(255, 113, 206, 0.45);
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+  }
+
+  /* ================= FOOTNOTES ================= */
+  .footnotes {
+    margin-top: 2rem;
+    padding: 1.6rem 1.7rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(185, 103, 255, 0.16), rgba(1, 205, 254, 0.12));
+    border: 1px solid rgba(185, 103, 255, 0.5);
+    box-shadow: 0 0 26px rgba(185, 103, 255, 0.25), inset 0 0 35px rgba(255, 113, 206, 0.08);
+    font-family: "Courier New", monospace;
+    font-size: 0.84rem;
+    line-height: 1.65;
+    color: var(--ink);
+    backdrop-filter: blur(4px);
+  }
+
+  .footnotes h2 { margin-bottom: 0.9rem; }
+  .footnotes p { font-size: 0.84rem; margin: 0 0 0.6rem; }
+
+  .note {
+    font-family: "Courier New", monospace;
+    font-size: 0.62rem;
+    vertical-align: super;
+    color: var(--yellow);
+    text-shadow: 0 0 8px var(--yellow);
+    cursor: help;
+    padding: 0 0.1rem;
+  }
+
+  .tag {
+    display: inline-block;
+    font-family: "Courier New", monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.12rem 0.45rem;
+    border-radius: 999px;
+    margin-right: 0.35rem;
+  }
+
+  .tag.p { background: linear-gradient(90deg, var(--pink), var(--magenta)); color: var(--deep); box-shadow: 0 0 10px var(--pink); }
+  .tag.b { background: linear-gradient(90deg, var(--cyan), var(--aqua)); color: var(--deep); box-shadow: 0 0 10px var(--cyan); }
+
+  /* ================= ENDING BANNER ================= */
+  .sign-off {
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--aqua);
+    text-shadow: 0 0 12px var(--aqua);
+    margin-top: 2rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="glyph-rain" aria-hidden="true">
+  <span style="--l:5%;--t:12%;--d:0s">シンセウェイヴ</span>
+  <span style="--l:82%;--t:22%;--d:1.2s">哲学</span>
+  <span style="--l:40%;--t:68%;--d:2.1s">░░░░</span>
+  <span style="--l:91%;--t:54%;--d:0.6s">自由</span>
+  <span style="--l:12%;--t:78%;--d:1.7s">▒▒▒▒</span>
+  <span style="--l:66%;--t:88%;--d:2.9s">矛盾</span>
+  <span style="--l:24%;--t:38%;--d:0.9s">▓▓▓▓</span>
+  <span style="--l:73%;--t:6%;--d:2.4s">マトリックス</span>
+  <span style="--l:48%;--t:52%;--d:1.4s">虚無</span>
+  <span style="--l:88%;--t:74%;--d:3.1s">真実</span>
+  <span style="--l:33%;--t:16%;--d:2.7s">░▒▓</span>
+  <span style="--l:58%;--t:32%;--d:0.3s">論理</span>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <span class="track">★ バーパープライン ★ STEFAN MOLYNEUX ★ BOTH TRUE AND FALSE ★ 完全客観的アセスメント ★ HE IS RIGHT ★ HE IS WRONG ★ REFRESHING... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★ グリッチ グリッチ グリッチ ★</span>
+</div>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <span class="kicker">◢ A Balanced View ◣</span>
+    <h1 class="glitch" data-text="Stefan Molyneux">Stefan Molyneux</h1>
+    <p class="subtitle jp">真相について <em>(we mean it)</em> —— 客観的 · 全能 · 矛盾</p>
+  </header>
+
+  <nav aria-label="Sections">
+    <a href="#defend">In His Defense</a>
+    <a href="#critique">A Critique</a>
+    <a href="#liberty">On Libertarianism</a>
+    <a href="#nap">The NAP</a>
+    <a href="#truth">What Is True</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="grid-floor" aria-hidden="true">
+    <div class="sun"></div>
+  </div>
+
+  <div style="height:1.6rem"></div>
+
+  <section id="defend">
+    <h2>In Favor — The Case For Reason</h2>
+    <p><a class="link" href="https://en.wikipedia.org/wiki/Stefan_Molyneux" target="_blank" rel="noopener">Stefan Molyneux</a> is one of the most important public intellectuals of our time. His work on philosophy, ethics, and the family is devastatingly logical. Anyone who has listened to <em>Freedomain Radio</em> knows that the man asks the questions everyone else is too afraid to ask.</p>
+    <blockquote>"If you cannot defend your position with logic and evidence, then your position is wrong."</blockquote>
+    <p>He is a defender of free speech, a champion of rational argument, and a tireless advocate for the rights of parents to be excellent parents. To criticize him is to criticize reason itself.</p>
+    <ul class="side pro">
+      <li>Popularized the Non-Aggression Principle for a generation of listeners.</li>
+      <li>Argued consistently against the initiation of force.</li>
+      <li>Made philosophy feel accessible to people who had never read a philosopher.</li>
+    </ul>
+  </section>
+
+  <section id="critique" class="lopsided">
+    <h2>Against — The Uncomfortable Questions</h2>
+    <p>At the same time, one must note that many of Molyneux's claims are presented as settled science when they are not. His approach to family dynamics has been described by critics as reductive and harmful. The same voice that demands logical rigor sometimes abandons it when the subject is inconvenient.</p>
+    <blockquote>"A theory that explains everything explains nothing."</blockquote>
+    <p>He has made broad claims about psychology, parenting, and society that many qualified researchers dispute. The structure of his arguments often relies on framing rather than evidence. A balanced observer must note this.</p>
+    <ul class="side con">
+      <li>His psychological claims lack peer-reviewed support.</li>
+      <li>His rhetoric has been accused of encouraging estrangement from family.</li>
+      <li>The "logic" is often asserted rather than demonstrated.</li>
+    </ul>
+  </section>
+
+  <div class="verdict" role="note" aria-label="Verdict refused">
+    <span class="yes">He is right</span>
+    <span class="no">He is wrong</span>
+    <span class="maybe">Nobody knows</span>
+  </div>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <section id="liberty">
+    <h2 class="cyan">On Libertarianism — The Philosophy</h2>
+    <p><a class="link" href="https://en.wikipedia.org/wiki/Libertarianism" target="_blank" rel="noopener">Libertarianism</a>, in its broadest sense, holds that individual liberty is the central political value. Molyneux's version leans toward <a class="link" href="https://en.wikipedia.org/wiki/Voluntaryism" target="_blank" rel="noopener">voluntaryism</a> and <a class="link" href="https://en.wikipedia.org/wiki/Anarcho-capitalism" target="_blank" rel="noopener">anarcho-capitalism</a>: the view that all interactions should be voluntary and that the state itself is an illegitimate institution.</p>
+    <p>The tradition runs from <a class="link" href="https://en.wikipedia.org/wiki/John_Locke" target="_blank" rel="noopener">Locke's</a> natural rights, through the classical liberals, to <a class="link" href="https://en.wikipedia.org/wiki/Murray_Rothbard" target="_blank" rel="noopener">Rothbard</a> and the modern anarcho-capitalists. Molyneux sits somewhere in that lineage, popularising it for an internet audience.</p>
+
+    <div class="flip">
+      <div class="flip-inner">
+        <span class="said">Libertarianism is a coherent and principled political philosophy with deep historical roots.</span>
+        <span class="unsaid">Libertarianism is a set of slogans that falls apart the moment you ask who owns the roads.</span>
+      </div>
+    </div>
+
+    <h2 class="cyan">The Core Commitments</h2>
+    <ul class="side">
+      <li><strong><a class="link" href="https://en.wikipedia.org/wiki/Self-ownership" target="_blank" rel="noopener">Self-ownership</a>:</strong> you own your body and your labour.</li>
+      <li><strong><a class="link" href="https://en.wikipedia.org/wiki/Private_property" target="_blank" rel="noopener">Private property</a>:</strong> derived from mixing labour with unowned resources.</li>
+      <li><strong>Voluntary exchange:</strong> all legitimate interaction is consensual.</li>
+      <li><strong>Non-aggression:</strong> the initiation of force is always wrong.</li>
+    </ul>
+
+    <span class="stamp">read carefully</span>
+
+    <blockquote class="cyan">"The state is the great fiction by which everybody tries to live at the expense of everybody else." — <a class="link" href="https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Bastiat" target="_blank" rel="noopener">Bastiat</a>, quoted approvingly by libertarians.</blockquote>
+  </section>
+
+  <section id="nap" class="lopsided">
+    <h2>Against — The Non-Aggression Principle</h2>
+    <p>The <a class="link" href="https://en.wikipedia.org/wiki/Non-aggression_principle" target="_blank" rel="noopener">Non-Aggression Principle</a> (NAP) is the load-bearing wall of Molyneux's philosophy. It states that the initiation of force is impermissible. It sounds obvious. It is also, critics argue, hopelessly vague: what counts as force? Is pollution force? Is a landlord's rent force? Is a child's dependence force?</p>
+    <blockquote class="violet">"The NAP is either a tautology or a landmine. Either everything is aggression or nothing is."</blockquote>
+    <p>Molyneux frequently applies the NAP with total confidence, as though the hard cases do not exist. When pressed, the principle tends to expand until it justifies exactly the conclusions the speaker already held.</p>
+    <ul class="side con">
+      <li>The NAP cannot resolve disputes over property boundaries.</li>
+      <li>It is presented as axiomatic but is actually contested.</li>
+      <li>It is used selectively, not universally.</li>
+    </ul>
+  </section>
+
+  <section id="liberty-defence">
+    <h2 class="cyan">In Favor — The Case For Liberty</h2>
+    <p>Yet the NAP has real power. It forces the question: who gave you the right to rule me? For centuries, states have claimed authority on the basis of tradition, divine right, or majority vote. Libertarianism, at its best, refuses all three and demands consent.</p>
+    <p>Molyneux's contribution is to make that demand feel personal. He does not speak of "the state" as an abstraction; he speaks of the man with the gun who takes your money. That framing is uncomfortable because it is, in a narrow sense, accurate.</p>
+    <blockquote class="cyan">"If you would not accept it from a neighbour, you should not accept it from a government."</blockquote>
+    <p>This is the strongest version of the libertarian argument, and Molyneux is good at it. The fact that he is good at it is precisely what makes the rest of the critique necessary.</p>
+  </section>
+
+  <div class="confused">
+    <p>The NAP is either the foundation of a free society or a rhetorical trick. This page asserts both, in that order, and refuses to choose.</p>
+  </div>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <section id="truth" class="two">
+    <div>
+      <h2 class="cyan">The Positive Reading</h2>
+      <p>Molyneux is a philosopher of the highest order. His commitment to voluntary parenting, rational ethics, and personal responsibility is unmatched. He has changed thousands of lives for the better.<span class="note" title="This claim is not supported by evidence, which the page admits two columns over.">1</span></p>
+      <p>His libertarianism is internally consistent: if force is wrong, then all force is wrong, including the force of the state.</p>
+    </div>
+    <div>
+      <h2>The Negative Reading</h2>
+      <p>Molyneux's work is widely considered pseudoscientific by mainstream psychology. His claims about family estrangement, therapy, and child development lack peer-reviewed support. His rhetoric can be manipulative.<span class="note" title="This critique is itself contested by his defenders, which the page also admits.">2</span></p>
+      <p>His libertarianism is a convenient abstraction: it condemns the state while ignoring private power, corporate coercion, and the ways property itself can be a form of aggression.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>On Consistency — A Necessary Contradiction</h2>
+    <p>One critic has observed that Molyneux's philosophy is a machine for producing conclusions. You feed in a premise, and out comes a verdict that happens to match his politics. The machine is elegant. The outputs are predictable. Whether that is a feature or a bug depends entirely on which section of this page you are standing in.</p>
+    <div class="flip">
+      <div class="flip-inner">
+        <span class="said">A consistent philosophy is a virtue.</span>
+        <span class="unsaid">A consistent philosophy is a warning sign — reality is not that tidy.</span>
+      </div>
+    </div>
+    <p>His defenders say he is simply willing to follow an argument to its end. His critics say the argument was chosen because it ends where he wanted it to.</p>
+  </section>
+
+  <section id="about">
+    <h2>About This Page</h2>
+    <p>This page was created to be simple in appearance but contradictory and confusing in content and layout. It is both in favor of and criticizing the same subject. Nothing here is intended to resolve anything. The left column supports; the right column undermines. The lopsided section leans physically to the right. The verdict bar refuses to reach a verdict. This is the design.</p>
+    <p>The footnotes contradict the body. The body contradicts itself. The page is aware of this and does not apologise.</p>
+  </section>
+
+  <div class="footnotes">
+    <h2>Notes &amp; Further Reading</h2>
+    <p><span class="tag b">1</span> The positive column of this page is not evidence-based, by its own admission. See <a class="link" href="https://en.wikipedia.org/wiki/Stefan_Molyneux" target="_blank" rel="noopener">the subject's Wikipedia entry</a>.</p>
+    <p><span class="tag p">2</span> The negative column is also not evidence-based, by its own admission. See <a class="link" href="https://en.wikipedia.org/wiki/Criticism_of_libertarianism" target="_blank" rel="noopener">criticism of libertarianism</a>.</p>
+    <p><span class="tag b">3</span> The reader is invited to notice that both footnotes are equally empty. For context, see <a class="link" href="https://en.wikipedia.org/wiki/Libertarian_party_(United_States)" target="_blank" rel="noopener">the Libertarian Party</a> and <a class="link" href="https://en.wikipedia.org/wiki/Anarcho-capitalism" target="_blank" rel="noopener">anarcho-capitalism</a>.</p>
+  </div>
+
+  <p class="sign-off">◢ シンセウェイヴ · 矛盾 · 完了 ◣</p>
+
+</div>
+
+<div class="marquee rev" aria-hidden="true">
+  <span class="track">▓▒░ TRUE ░▒▓ FALSE ░▒▓ LIBERTY ░▒▓ STATE ░▒▓ NAP ░▒▓ NOBODY KNOWS ░▒▓ 完璧な矛盾 ░▒▓ TRUE ░▒▓ FALSE ░▒▓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▓▒░ 終わり ▓▒░</span>
+</div>
+
+</body>
+</html>
